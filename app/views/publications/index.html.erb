@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+
+    <!-- Page Header-->
+
+
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+    
+
+        <header class="masthead mb-2" style="background-image: url('https://cdn.pixabay.com/photo/2015/06/24/15/45/code-820275_960_720.jpg')">
+            <div class="container position-relative px-4 px-lg-5  ">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+
+                        <button type="button">
+                          <%= link_to 'New Publication', new_publication_path ,class:"btn btn-dark text-white"  %>
+                        </button>
+
+                            <h1>Code Developer</h1>
+                            <span class="subheading">Publica tus recursos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+      </div>
+
+        <div class="container">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+
+
+
+          <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="post.html"><h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2></a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on September 18, 2022
+                        </p>
+                    </div>    
+
+
+<h1>Publications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Tools</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.title %></td>
+        <td><%= publication.description %></td>
+        <td><%= publication.tools %></td>
+        <td><%= publication.code %></td>
+        <td><%= link_to 'Show', publication %></td>
+        <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication', new_publication_path %>
+
+
+
