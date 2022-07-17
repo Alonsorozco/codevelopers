@@ -1,3 +1,5 @@
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+
 <%= form_with(model: publication, local: true) do |form| %>
   <% if publication.errors.any? %>
     <div id="error_explanation">
@@ -11,27 +13,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-outline">
+    <%= form.text_field :title, class:"form-control",placeholder:"¿Que titulo debe llevar tu publicacion?" %>
+    <label class="form-label">Titulo de la publicacion</label>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+  <div class="form-outline">
+    <%= form.text_area :description, class:"form-control",placeholder:"Debes describir para que se utiliza tu comado o codigo compartido" %>
+    <label class="form-label">Descripcion del comando</label>
   </div>
 
-  <div class="field">
-    <%= form.label :tools %>
-    <%= form.text_field :tools %>
+  <div class="form-outline">
+    <%= form.text_field :tools, class:"form-control",placeholder:"Indicar para que lenguaje o herramienta sirve el codigo como por ej:ruby on rails"  %>
+    <label class="form-label">Nombre de la herramienta o leguaje de programacion </label>
   </div>
 
-  <div class="field">
-    <%= form.label :code %>
-    <%= form.text_field :code %>
+  <div class="form-outline">
+    <%= form.text_area :code, class:"form-control",placeholder:"Debes indicar el comando o codigo para el recurso compartido" %>
+    <label class="form-label">Codigo o comando </label>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+   <div class = 'actions'>
+            <%= form.submit "Publicar", class:"btn btn-info text-white"  %>
+        </div>
+  <% end %>
+
+ 
+
+</div>
+
+
+
+
+
+
