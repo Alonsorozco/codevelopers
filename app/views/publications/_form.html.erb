@@ -1,4 +1,4 @@
-<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+<div class="container shadow-lg p-3 mb-5 bg-dark rounded">
 
 <%= form_with(model: publication, local: true) do |form| %>
   <% if publication.errors.any? %>
@@ -14,27 +14,27 @@
   <% end %>
 
   <div class="form-outline">
-    <%= form.text_field :title, class:"form-control",placeholder:"¿Que titulo debe llevar tu publicacion?" %>
+    <%= form.text_field :title, class:"form-control bg-dark text-muted",placeholder:"¿Que titulo debe llevar tu publicacion?" %>
     <label class="form-label">Titulo de la publicacion</label>
   </div>
 
   <div class="form-outline">
-    <%= form.text_area :description, class:"form-control",placeholder:"Debes describir para que se utiliza tu comado o codigo compartido" %>
+    <%= form.text_area :description, class:"form-control bg-dark text-muted",placeholder:"Debes describir para que se utiliza tu comado o codigo compartido" %>
     <label class="form-label">Descripcion del comando</label>
   </div>
 
   <div class="form-outline">
-    <%= form.text_field :tools, class:"form-control",placeholder:"Indicar para que lenguaje o herramienta sirve el codigo como por ej:ruby on rails"  %>
+    <%= form.text_field :tools, class:"form-control bg-dark text-muted",placeholder:"Indicar para que lenguaje o herramienta sirve el codigo como por ej:ruby on rails"  %>
     <label class="form-label">Nombre de la herramienta o leguaje de programacion </label>
   </div>
 
   <div class="form-outline">
-    <%= form.text_area :code, class:"form-control",placeholder:"Debes indicar el comando o codigo para el recurso compartido" %>
+    <%= form.text_area :code, class:"form-control bg-dark text-muted",placeholder:"Debes indicar el comando o codigo para el recurso compartido" %>
     <label class="form-label">Codigo o comando </label>
   </div>
 
-   <div class = 'actions'>
-            <%= form.submit "Publicar", class:"btn btn-info text-white"  %>
+  <div class = 'actions'>
+            <%= form.submit "Publicar", class:"btn btn-info text-dark btn btn-info text-dark rounded-pill p-2"  %>
         </div>
   <% end %>
 

@@ -95,9 +95,9 @@ body {
 hr {
   margin: 1rem 0;
   color: inherit;
-  background-color: currentColor;
+  background-color:#0085A1;
   border: 0;
-  opacity: 0.25;
+  opacity: 0.60;
 }
 
 hr:not([size]) {
