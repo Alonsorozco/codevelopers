@@ -1,9 +1,19 @@
 class PublicationsController < ApplicationController
+
   before_action :set_publication, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /publications or /publications.json
   def index
-    @publications = Publication.all
+
+    @q = params[:q]
+    if @q
+      @publications = Publication.where('title LIKE ?', "%#{params[:q]}%").order(created_at: :desc)
+    else
+      @publications= Publication.all.order(created_at: :desc)
+    end
+  # @publications = Publication.all.order(created_at: :desc)
+   
   end
 
   # GET /publications/1 or /publications/1.json
@@ -65,6 +75,6 @@ class PublicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def publication_params
-      params.require(:publication).permit(:title, :description, :tools, :code)
+      params.require(:publication).permit(:title, :description, :tools, :code, :user_id)
     end
 end
