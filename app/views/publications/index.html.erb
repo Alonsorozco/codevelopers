@@ -31,7 +31,7 @@
           <div class="container ">
             <hr class="text-muted"/>
             <ul>
-                  <%= publication.user.email%>
+                 <%= publication.user.username %>
               <li><h3 class="text-muted" ><%= publication.title %></h3></li>
               <%= link_to 'Show', publication %>
                   <%= link_to 'Edit', edit_publication_path(publication) %>
