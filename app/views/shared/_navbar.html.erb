@@ -8,14 +8,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <ul class="navbar-nav ms-5 mb-2 mb-lg-0 ms-auto ">
 
+         <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex p-1 form-control bg-dark text-muted h-25 d-inline-block') do %>
+          <%= text_field_tag :q, "Buscar", class: 'form-control bg-secondary text-dark w-auto p-1 h-25 d-inline-block ' %>
+            <%= submit_tag( "Buscar", Class: 'btn btn-outline-success btn-sm' )%>
           
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Publicar</a>
-                </li>
-
+          <%end%>
+  
   
 
             <li class="nav-item dropdown">
@@ -33,10 +33,15 @@
                  <li class="dropdown-item">
                     <%= link_to ' Sesion',destroy_user_session_path, class:"nav-link text-dark" %>
                 </li>
-                
 
             </ul>
             </li>
+
+                  <li class="nav-item ">
+                    <a class="nav-link" href="#">Publicar</a>
+                </li>
+
+
             </div>
         </ul>
         </div>

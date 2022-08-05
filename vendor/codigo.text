@@ -1,0 +1,5 @@
+Codigo para eliminar publication editar
+
+<%= link_to 'Show', publication %>
+<%= link_to 'Edit', edit_publication_path(publication) %>
+<%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %>
