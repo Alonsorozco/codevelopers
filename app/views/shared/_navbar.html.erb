@@ -1,7 +1,11 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mr-6">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Codeveloper</a>
+        <a class="navbar-brand fw-lighter" href=""><i class="fa-solid fa-desktop"></i> CODEVELOPER</a>
+        <% if  user_signed_in? %>
+        <span class="text-white fs-6 ">Hola</span> &nbsp<a class="text-info fs-6 "><%=current_user.username%></a>
+        <% end %>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,23 +15,18 @@
         <% if  user_signed_in? %>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li>
-            <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"nav-link" %>
+            <a class="nav-link active" aria-current="page" href=""><i class="fa-solid fa-house-chimney"></i></a>
         </li>
 
 
-
-           <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex  p-1 form-control bg-dark text-muted h-25 d-inline-block' ) do %>
-        <%= text_field_tag :q, "", class: 'form-control w-auto p-1 h-25 d-inline-block  rounded-pill', style:"background-color:#0D1117"%>
+        <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex  p-1 form-control bg-dark h-25 d-inline-block' ) do %>
+        <%= text_field_tag :q, "", class: 'form-control w-auto p-1 h-25 d-inline-block rounded-pill text-light ', style:"background-color:#0D1117"%>
         <%= submit_tag( "Buscar", Class: 'btn btn-outline-success btn-sm' )%>
         <% end %>
+        <div class="badge bg-danger h-25 ms-1  text-wrap" style="width: 4rem;">
+                <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"nav-link text-white" %>
+        </div>
+
         
         <% else %>
 
@@ -52,7 +51,7 @@
             </li>
 
         <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex  p-1 form-control bg-dark text-muted h-25 d-inline-block' ) do %>
-        <%= text_field_tag :q, "", class: 'form-control w-auto p-1 h-25 d-inline-block  rounded-pill', style:"background-color:#0D1117"%>
+        <%= text_field_tag :q, "", class: 'form-control w-auto p-1 h-25 d-inline-block  text-light rounded-pill', style:"background-color:#0D1117"%>
         <%= submit_tag( "Buscar", Class: 'btn btn-outline-success btn-sm' )%>
         
         <%end%>
