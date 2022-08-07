@@ -4,8 +4,8 @@
 
 
 
-<h2 class="fs-5 mb-4">Log in</h2>
-<div class="container card border border-secondary  w-sing" style="background-color:#161B22">
+<h2 class="fs-5 mb-4 opacity-75 ">Log in</h2>
+<div class="container card border border-secondary opacity-75 w-sing" style="background-color:#161B22">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-outline mb-4">
@@ -30,7 +30,7 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links"%>
 
 
 </div>
