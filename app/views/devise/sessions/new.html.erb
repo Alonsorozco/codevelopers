@@ -4,28 +4,29 @@
 
 
 
-<h2>Log in</h2>
+<h2 class="fs-5 mb-4">Log in</h2>
+<div class="container card border border-secondary  w-sing" style="background-color:#161B22">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-outline mb-4">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class:"mb-auto mt-3 opacity-100 fs-6 " %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"border-secondary border rounded-pill opacity-50", style:"background-color:#0D1117" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.label :password, class:"mb-auto  fs-6 mt-3" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class:"border-secondary border rounded-pill opacity-50", style:"background-color:#0D1117" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :remember_me, class:"mb-auto  fs-6 mt-3" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class:"btn  mt-3 mb-3 text-white rounded-pill " ,style:"background-color:#2EA043;"%>
   </div>
 <% end %>
 
