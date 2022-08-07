@@ -6,9 +6,32 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
         <ul class="navbar-nav ms-5 mb-2 mb-lg-0 ms-auto ">
+
+        <% if  user_signed_in? %>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li>
+            <%= link_to 'Salir', destroy_user_session_path, method: :delete, class:"nav-link" %>
+        </li>
+
+
+
+           <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex  p-1 form-control bg-dark text-muted h-25 d-inline-block' ) do %>
+        <%= text_field_tag :q, "", class: 'form-control w-auto p-1 h-25 d-inline-block  rounded-pill', style:"background-color:#0D1117"%>
+        <%= submit_tag( "Buscar", Class: 'btn btn-outline-success btn-sm' )%>
+        <% end %>
+        
+        <% else %>
+
+
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
@@ -34,7 +57,7 @@
         
         <%end%>
   
-  
+        <% end %>
 
 
 
