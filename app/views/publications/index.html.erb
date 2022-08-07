@@ -21,6 +21,8 @@
 
               
           </div>
+
+        <!-- Card coment-->
   
     
           <% @publications.each do |publication| %>
@@ -42,7 +44,7 @@
                 <h6 class="fw-bold  mb-1 fs-4" style="color: #58A6FF;"><%= publication.title %></h6>
                 
                 <p class="text-info small mb-0 fs-6 ">
-                   Publicado hace <%= link_to distance_of_time_in_words(Time.now, publication.created_at), publication, class:"text-info"%> por <%= publication.user.username %>
+                    Publicado hace <%= link_to distance_of_time_in_words(Time.now, publication.created_at), publication, class:"text-info"%> por <%= publication.user.username %>
                 </p>
               </div>
             </div>
@@ -55,13 +57,13 @@
               <a href="" class="d-flex align-items-center me-3">
   
               <div class="badge bg-primary text-wrap" style="width: 6rem;">
-                 <%= publication.user.username %>
-             </div>
+                  <%= publication.user.username %>
+            </div>
 
               </a>
               <a href="" class="d-flex align-items-center me-3">
               <div class="badge bg-danger text-wrap" style="width: 6rem;">
-                 <%= publication.tools %>
+                <%= publication.tools %>
               </div>
               </a>
 
@@ -80,14 +82,6 @@
     </div>
   </div>
 </section>
-            
-            <ul>
-          
-
-            </ul>
-
-
-
             </div>
             <% end %> 
 

@@ -28,11 +28,11 @@
             </ul>
             </li>
 
-         <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex  p-1 form-control bg-dark text-muted h-25 d-inline-block') do %>
-          <%= text_field_tag :q, "", class: 'form-control bg-secondary text-dark w-auto p-1 h-25 d-inline-block  rounded-pill' %>
-            <%= submit_tag( "Buscar", Class: 'btn btn-outline-success btn-sm' )%>
-          
-          <%end%>
+        <%= form_with(url:root_path, method: :get, local: :true, class: ' d-flex  p-1 form-control bg-dark text-muted h-25 d-inline-block' ) do %>
+        <%= text_field_tag :q, "", class: 'form-control w-auto p-1 h-25 d-inline-block  rounded-pill', style:"background-color:#0D1117"%>
+        <%= submit_tag( "Buscar", Class: 'btn btn-outline-success btn-sm' )%>
+        
+        <%end%>
   
   
 
