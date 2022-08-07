@@ -10,12 +10,12 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-outline mb-4">
     <%= f.label :email, class:"mb-auto mt-3 opacity-100 fs-6 " %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"border-secondary border rounded-pill opacity-50", style:"background-color:#0D1117" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"border-secondary border rounded-pill opacity-50 text-white", style:"background-color:#0D1117" %>
   </div>
 
   <div class="field">
     <%= f.label :password, class:"mb-auto  fs-6 mt-3" %><br />
-    <%= f.password_field :password, autocomplete: "current-password", class:"border-secondary border rounded-pill opacity-50", style:"background-color:#0D1117" %>
+    <%= f.password_field :password, autocomplete: "current-password", class:"border-secondary border rounded-pill opacity-50 text-white", style:"background-color:#0D1117" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
