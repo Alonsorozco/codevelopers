@@ -1,0 +1,94 @@
+
+<header class="header-section">
+    <h1>Descubre los últimos comandos y codigos  <br> que comparte nuestra comunidad</h1>
+    <h2 class="Subtitulo">HTML ,CSS ,JAVASCRIPT, JQUERY, ROR</h2>
+     <div class="container mb-5 pt-3 ">
+        <%= link_to 'Registrate para Compartir', new_user_registration_path ,class:"btn  text-white rounded-pill "  ,style:"background-color:#2EA043" %>
+    </div>
+</header>
+
+
+
+
+   <% @publications.each do |publication| %>
+          <div class="container ">
+            <hr class="text-muted" style="background-color: #2C3E50;"/>
+
+
+          <section >
+            <div class="container  ">
+              <div class="row d-flex justify-content-center ">
+                <div class="col-md-12 col-lg-10 col-xl-8" >
+                  <div class="card"  style="background-color:#161B22;">
+                    <div class="card-body">
+                      <div class="d-flex flex-start align-items-center">
+                        <img class="rounded-circle shadow-1-strong me-3"
+                          src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar" width="60"
+                          height="60" />  
+                        <div>
+                          <h6 class="fw-bold  mb-1 fs-4" style="color: #58A6FF;"><%= publication.title %></h6>
+                          
+                          <p class="text-info small mb-0 fs-6 ">
+                              Publicado hace <%= link_to distance_of_time_in_words(Time.now, publication.created_at), publication, class:"text-info"%> por <%= publication.user.username %>
+                          </p>
+                        </div>
+                      </div>
+
+                      <p class="mt-3 mb-4 pb-2 text-white fw-bolder">
+                        <%= publication.description %>
+                      </p>
+
+                      <div class="small d-flex justify-content-start">
+                        <a href="" class="d-flex align-items-center me-3">
+            
+                      <div class="badge bg-primary text-wrap" style="width: 6rem;">
+                            <%= publication.user.username %>
+                      </div>
+
+                        </a>
+                        <a href="" class="d-flex align-items-center me-3">
+                        <div class="badge bg-danger text-wrap" style="width: 6rem;">
+                          <%= publication.tools %>
+                        </div>
+                        </a>
+
+                      </div>
+                    </div>
+                    <div class="card-footer py-3 border-1 border-secondary" style="background-color: #1D1F23;">
+                      <div class="d-flex flex-start w-100">
+                        <div class="form-outline w-100">
+                          <textarea class="form-control h-2  font-monospace fs-5 border-secondary text-warning" id="textAreaExample" rows="4"
+                            style="background: #1B2631; "><%= publication.code%></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
+          <% end %> 
+
+
+
+
+
+<footer>
+        <div class="bg-dark text-white text-center">
+            <div class="container p-5">
+                <h2 class="logo-footer"></h2>
+                
+                <ul class="footer-link">
+                    <li class=" text-white footer-link"> <a href=""class=" text-white footer-link"> Contacto </a> </li>
+                    <li class=" text-white footer-link"> <a href="" class=" text-white footer-link"> Perfil de creador </a> </li>
+                    <li class=" text-white footer-link"> <a href=""class=" text-white footer-link"> Repositorio</a> </li>
+                    <li class=" text-white footer-link"> <a href=""class=" text-white footer-link"> Blog</a> </li>
+                    <li class=" text-white footer-link"> <a href=""class=" text-white footer-link">Nuestro equipo</a></li>
+                    <hr class="bg-light">
+                    <li class=" text-white footer-link">©2022 Copyright: Codeveloper</li>
+                </ul>  
+            </div>
+        </div>
+
+</footer>

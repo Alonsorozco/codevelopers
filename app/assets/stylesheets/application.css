@@ -14,10 +14,39 @@
  *= require_self
  */
 
+
+
 .w-sing{
 
     width: 20rem;
 }
 
 
+.header-section { 
+    text-align: left;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/22/52/coding-1841550_960_720.jpg");
+    background-repeat:no-repeat;
+    padding-top: 3rem;
+
+
+                /*escala la imagen */ 
+    background-size:cover;
+    color: #ffffff;
+
+
+                /*sombras 1posicion horizontal 2 posicion vertical de la 3 sombre-desenfoque de la sombre y 4  luego el color */  
+    text-shadow: 0.125em 0.25em 0.125em #707070;
+    padding: 10rem 9rem;
+                
+}   
+
+
+.footer-link{
+
+    text-decoration:none !important; 
+    padding: 0.2rem;
+    display: block;
+  
+  
+}
 

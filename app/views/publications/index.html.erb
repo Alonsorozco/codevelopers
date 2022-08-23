@@ -1,10 +1,9 @@
 <p id="notice"class="text_white" role="alert"><%= notice %></p>
 
 
+<% if user_signed_in? %>
 
 
-
-    <!-- Page Header-->
           <% if  user_signed_in? %>
 
             <div class="container mb-5">
@@ -56,7 +55,7 @@
                       <div class="small d-flex justify-content-start">
                         <a href="" class="d-flex align-items-center me-3">
             
-                        <div class="badge bg-primary text-wrap" style="width: 6rem;">
+                      <div class="badge bg-primary text-wrap" style="width: 6rem;">
                             <%= publication.user.username %>
                       </div>
 
@@ -82,8 +81,30 @@
               </div>
             </div>
           </section>
-            </div>
-            <% end %> 
+          </div>
+          <% end %> 
+
+
+
+
+
+
+
+
+<% else %>
+
+
+
+    <div class = "">
+        <%= render "publications/visit" %>
+    </div>
+    
+    
+      
+
+<% end %>
+
+
 
 
 

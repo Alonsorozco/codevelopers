@@ -1,10 +1,10 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mr-6">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mr-6 p-4">
     <div class="container-fluid">
         <a class="navbar-brand fw-lighter" href=""><i class="fa-solid fa-desktop"></i> CODEVELOPER</a>
         <% if  user_signed_in? %>
         <span class="text-white fs-6 ">Hola</span> &nbsp<a class="text-info fs-6 "><%=current_user.username%></a>
-        <% end %
+        <% end %>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,7 +14,7 @@
         <% if  user_signed_in? %>
 
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href=""><i class="fa-solid fa-house-chimney"></i></a>
+            <a class="nav-link active" aria-current="page" href="<%=root_path%>"><i class="fa-solid fa-house-chimney"></i></a>
         </li>
 
 
@@ -31,7 +31,7 @@
 
 
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="<%=root_path%>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                 </svg>
