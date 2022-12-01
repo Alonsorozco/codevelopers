@@ -1,15 +1,3 @@
-
-<header class="header-section">
-    <h1>Descubre los últimos comandos y codigos  <br> que comparte nuestra comunidad</h1>
-    <h2 class="Subtitulo">HTML ,CSS ,JAVASCRIPT, JQUERY, ROR</h2>
-     <div class="container mb-5 pt-3 ">
-        <%= link_to 'Registrate para Compartir', new_user_registration_path ,class:"btn  text-white rounded-pill "  ,style:"background-color:#2EA043" %>
-    </div>
-</header>
-
-
-
-
    <% @publications.each do |publication| %>
           <div class="container ">
             <hr class="text-muted" style="background-color: #2C3E50;"/>
